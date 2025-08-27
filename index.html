@@ -13,9 +13,9 @@
 <header>
     <nav class="container">
         <div class="logo">
-        <img class="logo" src="img/loogo.png">
-            <h4>PMJ Health</h4>
-            </div>
+            <img class="logo-img" src="img/loogo.png" alt="PMJ Health Logo">
+            <h4 class="logo-text">PMJ Health</h4>
+        </div>
         </a>
         <ul class="nav-links">
             <li><a href="#home">Beranda</a></li>
@@ -90,6 +90,256 @@
     </div>
 </section>
 
+<section class="specialties">
+    <div class="container">
+        <h2>Keahlian</h2>
+        <div class="specialties-grid">
+            <div class="specialty-card">
+                <div class="service-icon">❤️</div>
+                <h3>Jantung</h3>
+            </div>
+            <div class="specialty-card">
+                <div class="service-icon">🫁</div>
+                <h3>Paru-paru</h3>
+            </div>
+            <div class="specialty-card">
+                <div class="service-icon">🧠</div>
+                <h3>Neurologi</h3>
+            </div>
+            <div class="specialty-card">
+                <div class="service-icon">🦴</div>
+                <h3>Ortopedi</h3>
+            </div>
+            <div class="specialty-card">
+                <div class="service-icon">👁️</div>
+                <h3>Mata</h3>
+            </div>
+            <div class="specialty-card">
+                <div class="service-icon">👶</div>
+                <h3>Anak</h3>
+            </div>
+            <div class="specialty-card">
+                <div class="service-icon">🩺</div>
+                <h3>Umum</h3>
+            </div>
+            <div class="specialty-card">
+                <div class="service-icon">💉</div>
+                <h3>Vaksinasi</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="doctors" class="doctors">
+    <div class="container">
+        <h2>Dokter Terbaik</h2>
+        <div class="doctors-slider-container">
+            <!-- Hidden radio buttons for CSS-only slider -->
+            <input type="radio" name="doctor-slide" id="slide1" checked>
+            <input type="radio" name="doctor-slide" id="slide2">
+            <input type="radio" name="doctor-slide" id="slide3">
+
+            <!-- Navigation buttons -->
+            <label for="slide2" class="slider-btn prev-btn" id="prev-from-1">‹</label>
+            <label for="slide3" class="slider-btn prev-btn" id="prev-from-2">‹</label>
+            <label for="slide1" class="slider-btn prev-btn" id="prev-from-3">‹</label>
+
+            <label for="slide2" class="slider-btn next-btn" id="next-from-1">›</label>
+            <label for="slide3" class="slider-btn next-btn" id="next-from-2">›</label>
+            <label for="slide1" class="slider-btn next-btn" id="next-from-3">›</label>
+
+            <div class="doctors-slider">
+                <div class="doctors-track">
+                    <!-- Slide 1: Dokter 1-3 -->
+                    <div class="doctors-slide">
+                        <div class="doctor-card">
+                            <div class="doctor-image">
+                                <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                    alt="Dr. Ahmad Rahman">
+                            </div>
+                            <div class="doctor-info">
+                                <h3>Dr. Ahmad Rahman</h3>
+                                <p class="specialty">Spesialis Jantung</p>
+                                <p>Berpengalaman lebih dari 15 tahun dalam bidang kardiologi. Menangani berbagai kasus
+                                    penyakit jantung dengan pendekatan modern dan holistik.</p>
+                            </div>
+                        </div>
+                        <div class="doctor-card">
+                            <div class="doctor-image">
+                                <img src="img/dokcewe.jpeg"
+                                    alt="Dr. Sarah Wijaya">
+                            </div>
+                            <div class="doctor-info">
+                                <h3>Dr. Sarah Wijaya</h3>
+                                <p class="specialty">Spesialis Anak</p>
+                                <p>Dokter anak berpengalaman yang peduli dengan tumbuh kembang anak. Menangani berbagai
+                                    masalah kesehatan anak dengan pendekatan yang ramah.</p>
+                            </div>
+                        </div>
+                        <div class="doctor-card">
+                            <div class="doctor-image">
+                                <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                    alt="Dr. Michael Chen">
+                            </div>
+                            <div class="doctor-info">
+                                <h3>Dr. Michael Chen</h3>
+                                <p class="specialty">Spesialis Neurologi</p>
+                                <p>Ahli neurologi dengan fokus pada gangguan sistem saraf. Menangani stroke, epilepsi,
+                                    dan berbagai penyakit neurologis lainnya dengan teknologi terkini.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Dokter 4-6 -->
+                    <div class="doctors-slide">
+                        <div class="doctor-card">
+                            <div class="doctor-image">
+                                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                    alt="Dr. Lisa Anderson">
+                            </div>
+                            <div class="doctor-info">
+                                <h3>Dr. Lisa Anderson</h3>
+                                <p class="specialty">Spesialis Mata</p>
+                                <p>Dokter spesialis mata dengan keahlian dalam operasi katarak, lasik, dan perawatan
+                                    retina. Berpengalaman menangani berbagai gangguan penglihatan.</p>
+                            </div>
+                        </div>
+                        <div class="doctor-card">
+                            <div class="doctor-image">
+                                <img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                    alt="Dr. David Kumar">
+                            </div>
+                            <div class="doctor-info">
+                                <h3>Dr. David Kumar</h3>
+                                <p class="specialty">Spesialis Ortopedi</p>
+                                <p>Spesialis tulang dan sendi dengan keahlian dalam bedah ortopedi. Menangani cedera
+                                    olahraga, arthritis, dan berbagai masalah muskuloskeletal.</p>
+                            </div>
+                        </div>
+                        <div class="doctor-card">
+                            <div class="doctor-image">
+                                <img src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                    alt="Dr. Maria Garcia">
+                            </div>
+                            <div class="doctor-info">
+                                <h3>Dr. Maria Garcia</h3>
+                                <p class="specialty">Spesialis Paru-paru</p>
+                                <p>Dokter spesialis paru dengan fokus pada penyakit pernapasan. Menangani asma, COPD,
+                                    pneumonia, dan berbagai gangguan sistem respirasi lainnya.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Dokter 7-9 -->
+                    <div class="doctors-slide">
+                        <div class="doctor-card">
+                            <div class="doctor-image">
+                                <img src="https://images.unsplash.com/photo-1638202993928-7267aad84c31?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                    alt="Dr. Robert Kim">
+                            </div>
+                            <div class="doctor-info">
+                                <h3>Dr. Robert Kim</h3>
+                                <p class="specialty">Spesialis Bedah</p>
+                                <p>Ahli bedah dengan keahlian dalam bedah minimal invasif. Menangani berbagai operasi
+                                    dengan teknik laparoskopi dan robotik terbaru.</p>
+                            </div>
+                        </div>
+                        <div class="doctor-card">
+                            <div class="doctor-image">
+                                <img src="img/amanda.jpeg"
+                                    alt="Dr. Amanda Taylor">
+                            </div>
+                            <div class="doctor-info">
+                                <h3>Dr. Amanda Taylor</h3>
+                                <p class="specialty">Spesialis Kulit</p>
+                                <p>Dermatolog berpengalaman dalam perawatan kulit medis dan kosmetik. Menangani berbagai
+                                    masalah kulit dengan pendekatan holistik.</p>
+                            </div>
+                        </div>
+                        <div class="doctor-card">
+                            <div class="doctor-image">
+                                <img src="img/dokcowo.jpeg"
+                                    alt="Dr. James Wilson">
+                            </div>
+                            <div class="doctor-info">
+                                <h3>Dr. James Wilson</h3>
+                                <p class="specialty">Spesialis THT</p>
+                                <p>Dokter spesialis Telinga, Hidung, dan Tenggorokan. Menangani gangguan pendengaran,
+                                    sinusitis, dan berbagai masalah THT dengan teknologi modern.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider dots -->
+            <div class="slider-dots">
+                <label for="slide1" class="dot"></label>
+                <label for="slide2" class="dot"></label>
+                <label for="slide3" class="dot"></label>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Hubungi Kami</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Nama</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Nomor Telepon</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Pesan</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="cta-button" style="width: 100%; padding: 1rem;">Kirim Pesan</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>PMJ Health</h3>
+                <p>Platform kesehatan digital terpercaya untuk kebutuhan kesehatan Anda dan keluarga.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Layanan</h3>
+                <a href="#">Konsultasi Online</a>
+                <a href="#">Apotek Online</a>
+                <a href="#">Medical Check-up</a>
+                <a href="#">Laboratorium</a>
+            </div>
+            <div class="footer-section">
+                <h3>Kontak</h3>
+                <p>📧 info@pmjhealth.com</p>
+                <p>📞 +62 21 1234 5678</p>
+                <p>📍 Jakarta, Indonesia</p>
+            </div>
+            <div class="footer-section">
+                <h3>Jam Operasional</h3>
+                <p>Senin - Jumat: 08:00 - 20:00</p>
+                <p>Sabtu - Minggu: 09:00 - 17:00</p>
+                <p>Emergency: 24/7</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 PMJ Health. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>

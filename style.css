@@ -1,5 +1,3 @@
-
-
 * {
     margin: 0;
     padding: 0;
@@ -33,21 +31,25 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
-    gap: 12px;
 }
 
-/* Logo*/
-nav img.logo {
-    height: 80px;
-    width: auto;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-img {
+    width: 70px;
+    height: 70px;
     object-fit: contain;
 }
 
-nav h4 {
-    font-size: 22px;
-    font-weight: 600;
-    color: #2d3748;
-    white-space: nowrap;
+.logo-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #20b4a1ff;
+    margin: 0;
 }
 
 .nav-links {
@@ -96,6 +98,13 @@ nav h4 {
     color: white;
 }
 
+/* Sembunyikan gambar overlay yang mengganggu */
+.hero img,
+.hero-overlay-image,
+.hero-image-overlay {
+    display: none !important;
+}
+
 .hero h1 {
     font-size: 3rem;
     font-weight: 700;
@@ -107,10 +116,6 @@ nav h4 {
     font-size: 1.3rem;
     margin-bottom: 40px;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
-}
-
-.hero-image {
-    display: none;
 }
 
 /* Services Section */
@@ -192,22 +197,360 @@ nav h4 {
     object-fit: cover;
 }
 
+/* Specialties Section */
+.specialties {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.specialties h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2dd4bf;
+}
+
+.specialties-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.specialty-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.specialty-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 30px rgba(45, 212, 191, 0.3);
+    background: linear-gradient(135deg, #2dd4bf 0%, #14b8a6 100%);
+    color: white;
+}
+
+.specialty-card:hover .service-icon {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transform: scale(1.2);
+}
+
+.specialty-card .service-icon {
+    transition: all 0.3s ease;
+}
+
+/* Doctors Section */
+.doctors {
+    padding: 80px 0;
+}
+
+.doctors h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2dd4bf;
+}
+
+.doctors-slider-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hide radio buttons */
+.doctors-slider-container input[type="radio"] {
+    display: none;
+}
+
+.doctors-slider {
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.doctors-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 300%; /* 3 slides */
+}
+
+.doctors-slide {
+    width: 33.333%;
+    display: flex;
+    gap: 2rem;
+    flex-shrink: 0;
+}
+
+.doctor-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    flex: 1;
+    transition: transform 0.3s ease;
+}
+
+.doctor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(45, 212, 191, 0.2);
+}
+
+.doctor-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.doctor-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.doctor-card:hover .doctor-image img {
+    transform: scale(1.1);
+}
+
+.doctor-info {
+    padding: 1.5rem;
+}
+
+.doctor-info h3 {
+    color: #2dd4bf;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.doctor-info .specialty {
+    color: #14b8a6;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.doctor-info p:last-child {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+/* Slider navigation buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #2dd4bf;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.slider-btn:hover {
+    background: #14b8a6;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+    left: -25px;
+}
+
+.next-btn {
+    right: -25px;
+}
+
+/* Show correct navigation buttons based on current slide */
+#slide1:checked ~ #next-from-1 {
+    display: flex;
+}
+
+#slide2:checked ~ #prev-from-2,
+#slide2:checked ~ #next-from-2 {
+    display: flex;
+}
+
+#slide3:checked ~ #prev-from-3 {
+    display: flex;
+}
+
+/* Slider dots */
+.slider-dots {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot:hover {
+    background-color: #2dd4bf;
+}
+
+/* Slider positions */
+#slide1:checked ~ .doctors-slider .doctors-track {
+    transform: translateX(0%);
+}
+
+#slide2:checked ~ .doctors-slider .doctors-track {
+    transform: translateX(-33.333%);
+}
+
+#slide3:checked ~ .doctors-slider .doctors-track {
+    transform: translateX(-66.666%);
+}
+
+/* Active dot indicators */
+#slide1:checked ~ .slider-dots .dot:nth-child(1),
+#slide2:checked ~ .slider-dots .dot:nth-child(2),
+#slide3:checked ~ .slider-dots .dot:nth-child(3) {
+    background-color: #2dd4bf;
+}
+
+.scroll-hint {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.contact {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+
+        .contact h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2dd4bf;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2dd4bf;
+        }
+
+         /* Footer */
+        footer {
+            background: #2dd4bf;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            opacity: 0.8;
+        }
+
 /* Responsive Design */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
+@media (max-width: 1024px) {
+   @media (max-width: 320px) {
     .hero h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
-
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+    
+    .hero p {
+        font-size: 0.9rem;
     }
-
-    .about-text h2 {
-        font-size: 2rem;
+    
+    .services h2,
+    .about-text h2,
+    .specialties h2,
+    .doctors h2,
+    .contact h2 {
+        font-size: 1.5rem;
+    }
+    
+    .service-card,
+    .specialty-card {
+        padding: 1rem;
+    }
+    
+    .doctor-card {
+        min-width: 280px;
+    }
+    
+    .contact-form {
+        margin: 0 5px;
     }
 }
+
+/* Base styles for the doctors section */
