@@ -521,14 +521,40 @@ nav {
         }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-   @media (max-width: 320px) {
+
+/* Mobile hamburger menu */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
     .hero h1 {
-        font-size: 1.5rem;
+        font-size: 3.5rem;
     }
     
     .hero p {
-        font-size: 0.9rem;
+        font-size: 1.4rem;
+    }
+    
+    .container {
+        padding: 0 40px;
+    }
+}
+
+/* Desktop and Tablet (992px to 1199px) */
+@media (max-width: 1199px) {
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
     }
     
     .services h2,
@@ -536,7 +562,323 @@ nav {
     .specialties h2,
     .doctors h2,
     .contact h2 {
-        font-size: 1.5rem;
+        font-size: 2.2rem;
+    }
+}
+
+/* Tablet (768px to 991px) */
+@media (max-width: 991px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    nav {
+        padding: 0.8rem 0;
+    }
+    
+    .logo-img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .logo-text {
+        font-size: 1.1rem;
+    }
+    
+    .nav-links {
+        gap: 1.5rem;
+    }
+    
+    .cta-button {
+        padding: 0.4rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .hero {
+        padding: 60px 0;
+        min-height: 80vh;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .about-image {
+        order: -1;
+    }
+    
+    .about-image img {
+        height: 300px;
+    }
+    
+    .specialties-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .doctors-slide {
+        gap: 1.5rem;
+    }
+    
+    .doctor-image {
+        height: 200px;
+    }
+    
+    .doctor-info {
+        padding: 1.2rem;
+    }
+    
+    .services,
+    .about,
+    .specialties,
+    .doctors,
+    .contact {
+        padding: 60px 0;
+    }
+}
+
+/* Small Tablet (576px to 767px) */
+@media (max-width: 767px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        gap: 1rem;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .cta-button {
+        padding: 0.4rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .hero {
+        padding: 40px 0;
+        min-height: 70vh;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    
+    .services h2,
+    .about-text h2,
+    .specialties h2,
+    .doctors h2,
+    .contact h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .service-card,
+    .specialty-card {
+        padding: 1.5rem;
+    }
+    
+    .specialties-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        gap: 1rem;
+    }
+    
+    .doctors-track {
+        width: 100%;
+    }
+    
+    .doctors-slide {
+        width: 100%;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .slider-btn {
+        display: none !important;
+    }
+    
+    .doctor-image {
+        height: 180px;
+    }
+    
+    .doctor-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .contact-form {
+        padding: 1.5rem;
+        margin: 0 15px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .services,
+    .about,
+    .specialties,
+    .doctors,
+    .contact {
+        padding: 50px 0;
+    }
+}
+
+/* Mobile (up to 575px) */
+@media (max-width: 575px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    nav {
+        padding: 0.6rem 0;
+    }
+    
+    .logo {
+        gap: 0.3rem;
+    }
+    
+    .logo-img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .logo-text {
+        font-size: 1rem;
+    }
+    
+    .hero {
+        padding: 30px 0;
+        min-height: 60vh;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+    
+    .hero p {
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+    }
+    
+    .services h2,
+    .about-text h2,
+    .specialties h2,
+    .doctors h2,
+    .contact h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .service-card,
+    .specialty-card {
+        padding: 1.2rem;
+    }
+    
+    .service-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+    
+    .about-image img {
+        height: 250px;
+    }
+    
+    .doctor-image {
+        height: 150px;
+    }
+    
+    .doctor-info {
+        padding: 1rem;
+    }
+    
+    .doctor-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .doctor-info .specialty {
+        font-size: 0.9rem;
+    }
+    
+    .doctor-info p:last-child {
+        font-size: 0.8rem;
+    }
+    
+    .contact-form {
+        padding: 1.2rem;
+        margin: 0 10px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+    
+    .services,
+    .about,
+    .specialties,
+    .doctors,
+    .contact {
+        padding: 40px 0;
+    }
+    
+    footer {
+        padding: 2rem 0 1rem;
+    }
+}
+
+/* Extra Small Mobile (up to 480px) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+    
+    .hero p {
+        font-size: 0.85rem;
+    }
+    
+    .services h2,
+    .about-text h2,
+    .specialties h2,
+    .doctors h2,
+    .contact h2 {
+        font-size: 1.6rem;
     }
     
     .service-card,
@@ -544,13 +886,47 @@ nav {
         padding: 1rem;
     }
     
-    .doctor-card {
-        min-width: 280px;
+    .doctor-info h3 {
+        font-size: 1rem;
+    }
+    
+    .contact-form {
+        padding: 1rem;
+    }
+}
+
+/* Very Small Mobile (up to 360px) */
+@media (max-width: 360px) {
+    .container {
+        padding: 0 8px;
+    }
+    
+    .hero h1 {
+        font-size: 1.4rem;
+    }
+    
+    .hero p {
+        font-size: 0.8rem;
+    }
+    
+    .services h2,
+    .about-text h2,
+    .specialties h2,
+    .doctors h2,
+    .contact h2 {
+        font-size: 1.4rem;
+    }
+    
+    .logo-text {
+        font-size: 0.9rem;
+    }
+    
+    .service-card,
+    .specialty-card {
+        padding: 0.8rem;
     }
     
     .contact-form {
         margin: 0 5px;
     }
 }
-
-/* Base styles for the doctors section */
